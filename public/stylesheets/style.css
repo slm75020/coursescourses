@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#map {
+  border: 2px solid black;
+  border-radius: 30px;
+  height: 50vh;
+  width: 50vw;
+  left: 50px;
+}
+header{
+  background-color: blue;
+
+}
+h1{
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-style: italic;
+}
