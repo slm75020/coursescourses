@@ -1,0 +1,33 @@
+extends ..layout
+
+block content
+
+
+#command
+  h2 RETRAIT
+  form(action="/" method="post")
+    input(type="text",placeholder="nom de l'entreprise", name="entreprise")
+    input(type="text",placeholder='nom', name="nom")
+    input(type="text",placeholder='prenom', name="prenom")
+    input(type='text',placeholder='@', name="mail")
+    input(type='text',placeholder='Adresse', name="Adresse")
+    input(type='text',placeholder='code porte', name="code porte")
+    input(type='text',placeholder='75---', name="code postal")
+    input(type='text',value='Paris')
+    input(type='text',placeholder='Tel bureau', name="Tel bureau")
+    input(type='text',placeholder='Tel portable', name="Tel portable")  
+    textarea(type='text',placeholder='Informations supplémentaires')
+  h2 LIVRAISON
+  form(action="/" method="post")
+    input(type="text",placeholder="nom de l'entreprise", name="entreprise")
+    input(type="text",placeholder='nom', name="nom")
+    input(type="text",placeholder='prenom', name="prenom")
+    input(type='text',placeholder='@', name="mail")
+    input(type='text',placeholder='Adresse', name="Adresse")
+    input(type='text',placeholder='code porte', name="code porte")
+    input(type='text',placeholder='75---', name="code postal")
+    input(type='text',value='Paris')
+    input(type='text',placeholder='Tel bureau', name="Tel bureau")
+    input(type='text',placeholder='Tel portable', name="Tel portable")
+    textarea(type='text',placeholder='Informations supplémentaires')  
+  input(type='submit',value='valider')

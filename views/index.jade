@@ -9,6 +9,35 @@ block content
 
   main
     div(id="map")
-
+    br
+    .connex
+      input.button(type='button',value='SE CONNECTER',onclick="connect();")
+      input.button(type="button",value="INSCRIPTION",onclick="showForm();")
+    br
+    br
+    #logIn
+      form(action="/users" method="post")
+        input(type="text",placeholder='nom', name="nom")
+        input(type="text",placeholder='prenom', name="prenom")
+        input(type='text',placeholder='@', name="mail")
+        input(type='text',placeholder='Adresse', name="Adresse")
+        input(type='text',value='75',placeholder='---', name="code postal")
+        input(type='text',value='Paris')
+        input(type='text',placeholder='Tel bureau',value='01', name="Tel bureau")
+        input(type='text',placeholder='Tel portable', name="Tel portable")
+        input(type='password',placeholder='password',name="password")
+        input(type='password',placeholder='confirm password',name="password2")
+        input(type='submit',value='valider')
+    #signIn
+      form(action="/users" method="post")
+        input(type='text',placeholder='@', name="mail")
+        input(type='password',placeholder='password',name="password")
+        input(type='submit',value='valider')
+    
+        
+  script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSx9l0DDT7N7TgAZ4WqJsePfP5QJS18Is&callback=initMap")
+  br
+  
+  hr
   footer
     a(href)

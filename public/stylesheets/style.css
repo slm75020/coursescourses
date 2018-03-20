@@ -1,5 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -11,17 +14,91 @@ a {
   border-radius: 30px;
   height: 50vh;
   width: 50vw;
-  left: 50px;
+  left: 25vw;
+  position: relative;
+  margin: 20px;
 }
-header{
+header {
+
   background-color: blue;
+  height: 100px;
+  width: 100vw;
 
 }
-h1{
+h1 {
+  padding: 10px;
   text-align: center;
 }
 
 h4 {
   text-align: center;
   font-style: italic;
+}
+.connex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.button {
+  border:2px solid black;
+  border-radius: 5px;
+
+}
+.button:hover {
+  box-shadow:inset 200px 0px #646464;
+}
+#logIn {
+  display: none;
+  width: 30vw;
+  margin: auto;
+}
+#logIn.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#signIn {
+  display: none;
+  width: 30vw;
+  margin: auto;
+
+}
+
+#signIn.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+h2{
+  text-align: center;
+}
+#command{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border:3px solid black;
+  border-radius: 10px;
+
+}
+footer{
+  display: flex;
+  flex-direction: row;
+
+}
+
+@media screen and (max-width: 600px){
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #map {
+    border: 2px solid black;
+    border-radius: 30px;
+    height: 50vh;
+    width: 80vw;
+    margin: 20px;
+    left: 0px;
+  }
 }
