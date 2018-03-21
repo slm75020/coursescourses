@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-router.get('./users', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('command', { title: 'Commandez votre course' });
 });
 

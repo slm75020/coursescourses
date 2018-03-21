@@ -19,22 +19,22 @@ block content
         input(type="text",placeholder='prenom', name="prenom")
         input(type='text',placeholder='@', name="mail")
         input(type='text',placeholder='Adresse', name="Adresse")
-        input(type='text',value='75',placeholder='---', name="code postal")
-        input(type='text',value='Paris')
-        input(type='text',placeholder='Tel bureau',value='01', name="Tel bureau")
+        input(type='text',value='75',placeholder='code postal', name="codepostal")
+        input(type='text',value='Paris',name="ville",disabled)
+        input(type='text',placeholder='Tel bureau',value='01', name="Telbureau")
         input(type='text',placeholder='Tel portable', name="Tel portable")
         input(type='password',placeholder='password',name="password")
         input(type='password',placeholder='confirm password',name="password2")
         input(type='submit',value='valider')
     #signIn
-      form(action="/users", method="post")
+      form(action="/users/connect", method="post")
         input(type='text',placeholder='@', name="mail")
         input(type='password',placeholder='password',name="password")
         input(type='submit',value='valider')  
     hr#lign
     #side
       h3 Espace Coursier
-      form#runner(action="/users", method="post")
+      form#runner(action="/users/coursier", method="post")
         input(type="text",placeholder='nom', name="nom")
         input(type="text",placeholder='Position 75---', name="arrdt")
         input(type='password',placeholder='password',name="password")
