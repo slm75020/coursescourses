@@ -16,23 +16,26 @@ a {
   width: 50vw;
   left: 25vw;
   position: relative;
-  margin: 20px;
+  padding: 10px;
+  margin: 10px;
 }
 header {
 
-  background-color: blue;
-  height: 100px;
-  width: 100vw;
+  background-color: #1e4b68;
 
 }
 h1 {
   padding: 10px;
   text-align: center;
+  font-family: 'Faster One', cursive;
+  color: white;
+  font-size: 50px;
 }
 
-h4 {
+h3 {
   text-align: center;
   font-style: italic;
+  color: white;
 }
 .connex {
   display: flex;
@@ -46,7 +49,10 @@ h4 {
 
 }
 .button:hover {
-  box-shadow:inset 200px 0px #646464;
+  box-shadow:inset 200px 0px #3d444c;
+}
+main {
+  background-color: #1b7eae;
 }
 #logIn {
   display: none;
@@ -71,10 +77,8 @@ h4 {
   flex-direction: column;
   justify-content: space-around;
 }
-h2{
-  text-align: center;
-}
-#command{
+
+#command {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -82,9 +86,41 @@ h2{
   border-radius: 10px;
 
 }
-footer{
+#side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+#runner{
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+
+}
+
+#lign {
+  border: 2px solid black;
+}
+footer {
+  background-color: #3d444c;
+}
+h5 {
+  text-decoration: underline;
+  color: white;
+}
+ul {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  list-style-type: none;
+}
+li img {
+  width: 30px;
+  border-radius: 30px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px white;
 
 }
 
