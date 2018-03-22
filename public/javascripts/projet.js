@@ -9,6 +9,11 @@
     box.classList.toggle("show");
   }
 
+  function close() {
+    var box = document.getElementById("popUp");
+    box.classList.toggle("show");
+  }
+
   // var GoogleMapsApiLoader = require('google-maps-api-loader');
   // GoogleMapsApiLoader({
   //       libraries: ['places'],

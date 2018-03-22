@@ -1,10 +1,10 @@
 extends layout
 
 block content
+  #page2
+    h1.titre2 #{title}
 
-h1#{title}
-
-  #command
+    #command
     h2 RETRAIT
     form(action="/", method="post")
       input(type="text",placeholder="nom de l'entreprise", name="entreprise")
@@ -32,3 +32,18 @@ h1#{title}
       input(type='text',placeholder='Tel portable', name="Tel portable")
       textarea(type='text',placeholder='Informations supplémentaires')  
     input(type='submit',value='valider')
+    hr
+    footer
+      #contact
+      h5 Nous contacter
+      ul.slt
+        li
+          a(href="mailto:salem.yahiaoui75@gmail.com",class="link-image",target="_blank")
+          img(src="images/email.png" alt="lien mail")
+        li
+          a(href="" ,target="_blank")
+          img(src="images/fb.png", alt="lien facebook")
+        li
+          a(href="#")
+          img(src="images/phone.png" alt="0110111213")
+        

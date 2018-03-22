@@ -7,6 +7,12 @@ block content
     h3 Livré'(z)' quand vous voulez!
   
   main
+    if errors
+      div.alert
+        button#popUp(type='button',onclick="close();") X
+        ul
+          each error in errors
+            li= error
     div(id="map")
     br
     .connex
@@ -14,7 +20,7 @@ block content
       input.button(type="button",value="INSCRIPTION",onclick="showForm();")
     br
     #logIn
-      form(action="/users", method="post")
+      form(action="/", method="post")
         input(type="text",placeholder='nom', name="nom")
         input(type="text",placeholder='prenom', name="prenom")
         input(type='text',placeholder='@', name="mail")
@@ -25,7 +31,7 @@ block content
         input(type='text',placeholder='Tel portable', name="Tel portable")
         input(type='password',placeholder='password',name="password")
         input(type='password',placeholder='confirm password',name="password2")
-        input(type='submit',value='valider')
+        input(type='submit',value='valider')    
     #signIn
       form(action="/users/connect", method="post")
         input(type='text',placeholder='@', name="mail")
@@ -43,7 +49,7 @@ block content
   footer
     #contact
     h5 Nous contacter
-    ul
+    ul.slt
       li
         a(href="mailto:salem.yahiaoui75@gmail.com",class="link-image",target="_blank")
           img(src="images/email.png" alt="lien mail")
