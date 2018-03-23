@@ -17,6 +17,8 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
   // création d'un utilisateur
   // sauvegarde en base de données
+
+            // DON'T TRUST THE USERINFO
   var userInfo = req.body;
   var errors = [];
 
@@ -38,9 +40,8 @@ router.post('/', function(req, res, next) {
     res.render('index', { errors: errors });
   } else {
     var encryptedPassword = bcrypt.hash(userInfo.password, 10);
-    //res.send(encryptedPassword);
     res.redirect('/users', { title: 'Commandez votre course' });
-    //res.render('command', { title: 'Commandez votre course' });
+    // res.render('command', { title: 'Commandez votre course' });
   }
 });
 
