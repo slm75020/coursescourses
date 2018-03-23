@@ -41,9 +41,14 @@ a {
   margin: auto;
 }
 header {
-
   background-color: #1e4b68;
+}
 
+#deliv {
+  height: 50px;
+  position: relative;
+  left: 250px;
+  top: 70px;
 }
 h1 {
   padding: 10px;
@@ -74,7 +79,7 @@ h3 {
 
 }
 .button:hover {
-  box-shadow:inset 200px 0px #3d444c;
+  box-shadow: inset 200px 0px #2b9607;
 }
 main {
   background-color: #1b7eae;
@@ -115,21 +120,32 @@ main {
   justify-content: center;
   border:3px solid black;
   border-radius: 10px;
-
 }
-#side {
+
+#logInCoursier {
+  display: none;
+  margin: auto;
+}
+#logInCoursier.show {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  border: 3px solid;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
 }
 #runner{
+  display: none;
+  margin: auto;
+
+}
+#runner.show {
   display: flex;
   flex-direction: column;
   width: 150px;
 
 }
-
 #lign {
   border: 2px solid black;
 }
@@ -170,6 +186,12 @@ li img {
   *{
     margin: 0;
     padding: 0;
+  }
+  #deliv {
+    height: 50px;
+    position: relative;
+    top: 0px;
+    left: 40vw;
   }
   h1 {
     padding: 10px;

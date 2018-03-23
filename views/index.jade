@@ -3,17 +3,21 @@ extends layout
 block content
 
   header
+    img#deliv(src="images/deliv.png")
     h1= title
     h3 Livré'(z)' quand vous voulez!
-  
+    
   main
     if errors
-      div.alert
-        button#popUp(type='button',onclick="close();") X
+      div.alert#popUp
+        button#XX(type='button') x
         ul
           each error in errors
             li= error
     div(id="map")
+    br
+    hr#lign
+    h3 Espace Client
     br
     .connex
       input.button(type='button',value='SE CONNECTER',onclick="connect();")
@@ -38,9 +42,22 @@ block content
         input(type='password',placeholder='password',name="password")
         input(type='submit',value='valider')  
     hr#lign
-    #side
-      h3 Espace Coursier
-      form#runner(action="/users/coursier", method="post")
+    h3 Espace Coursier
+      .connex
+        input.button(type='button',value="S'INSCRIRE",onclick="inscript();")
+        input.button(type="button",value="ACCES AUX COURSES",onclick="access();")
+    br
+    #logInCoursier
+      form(action="/", method="post")
+        input(type="text",placeholder='nom', name="nom")
+        input(type="text",placeholder='prenom', name="prenom")
+        input(type='text',placeholder='@', name="mail")
+        input(type='text',placeholder='Tel portable', name="Tel portable")
+        input(type='password',placeholder='password',name="password")
+        input(type='password',placeholder='confirm password',name="password2")
+        input(type='submit',value='valider')
+    #runner    
+      form(action="/users/coursier", method="post")
         input(type="text",placeholder='nom', name="nom")
         input(type="text",placeholder='Position 75---', name="arrdt")
         input(type='password',placeholder='password',name="password")

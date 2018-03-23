@@ -1,4 +1,4 @@
-
+        // action (ecoute) sur boutons
   function showForm(){
     var box = document.getElementById("logIn");
     box.classList.toggle("show");
@@ -9,10 +9,27 @@
     box.classList.toggle("show");
   }
 
+  function inscript(){
+    var box = document.getElementById("logInCoursier");
+    box.classList.toggle("show");
+  }
+
+  function access(){
+    var box = document.getElementById("runner");
+    box.classList.toggle("show");
+  }
+
+
   function close() {
     var box = document.getElementById("popUp");
     box.classList.toggle("show");
   }
+
+  var el = document.getElementById("XX");
+  el.addEventListener("click", close, false);
+
+            // INITIALISATION DE LA MAP SELON LA DOC
+
 
   // var GoogleMapsApiLoader = require('google-maps-api-loader');
   // GoogleMapsApiLoader({
